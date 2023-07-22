@@ -99,10 +99,10 @@
     "resources": [
       {
         "alwaysLoaded": false,
-        "file": "assets/Desert Background.png",
+        "file": "assets/background.png",
         "kind": "image",
         "metadata": "",
-        "name": "Desert Background.png",
+        "name": "Background.png",
         "smoothed": true,
         "userAdded": false,
         "origin": {
@@ -2262,7 +2262,7 @@
       "height": 32,
       "name": "Background",
       "tags": "",
-      "texture": "Desert Background.png",
+      "texture": "Background.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
       "variables": [],
@@ -2350,7 +2350,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.9740245527629073,
+        "zoomFactor": 1.7116772697201594,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2399,7 +2399,7 @@
           "persistentUuid": "b1116977-4d20-4e3e-8e6d-14021318fc63",
           "width": 1024,
           "x": -32,
-          "y": -320,
+          "y": -192,
           "zOrder": -1,
           "numberProperties": [],
           "stringProperties": [],
@@ -6907,15 +6907,6 @@
                     "\"Run\""
                   ]
                 }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Link",
-                  "include": {
-                    "includeConfig": 0
-                  },
-                  "target": "DustEmitterSetup"
-                }
               ]
             },
             {
@@ -6948,15 +6939,6 @@
                   "parameters": [
                     "Soldier",
                     "\"Idle\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "DustParticles",
-                    ""
                   ]
                 }
               ]
@@ -7221,27 +7203,13 @@
           "customSize": true,
           "height": 896,
           "layer": "Background",
+          "locked": true,
           "name": "Background",
           "persistentUuid": "48c699d8-eec9-4115-ae30-822d8389a521",
           "width": 1024,
           "x": -32,
-          "y": -352,
+          "y": -224,
           "zOrder": 17,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "TutorialSprite",
-          "persistentUuid": "20ccb8d2-a0f4-4d6b-a908-74bb4a0149fe",
-          "width": 0,
-          "x": 48,
-          "y": 64,
-          "zOrder": 27,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -7272,36 +7240,6 @@
           "x": 0,
           "y": 250,
           "zOrder": 30,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "TutorialTouchscreenJump",
-          "persistentUuid": "f007fe19-0b98-419e-a9d4-3911b45fbbcb",
-          "width": 0,
-          "x": 576,
-          "y": -32,
-          "zOrder": 31,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "TutorialTouchscreenDuck",
-          "persistentUuid": "b5dec053-e367-4c4c-a9c9-4b98ee19087a",
-          "width": 0,
-          "x": 576,
-          "y": 180,
-          "zOrder": 32,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -13182,52 +13120,6 @@
                       ]
                     },
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "ParticleSystem::EmitterForceMin"
-                          },
-                          "parameters": [
-                            "DustParticles",
-                            "=",
-                            "Variable(ObstacleSpeed)/2"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ParticleSystem::EmitterForceMax"
-                          },
-                          "parameters": [
-                            "DustParticles",
-                            "=",
-                            "Variable(ObstacleSpeed)/2+45"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ParticleSystem::SetFlow"
-                          },
-                          "parameters": [
-                            "DustParticles",
-                            "=",
-                            "(100/1000)*Variable(ObstacleSpeed)"
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "ParticleSystem::EmitterAngleB"
-                          },
-                          "parameters": [
-                            "DustParticles",
-                            "=",
-                            "(90/1000)*Variable(ObstacleSpeed)"
-                          ]
-                        }
-                      ]
-                    },
-                    {
                       "colorB": 228,
                       "colorG": 176,
                       "colorR": 74,
@@ -13286,39 +13178,6 @@
                                 "textR": 0
                               },
                               "comment": "Makes ParticleEmitter follow the Soldier if he lands on an Island."
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::Once"
-                                  },
-                                  "parameters": []
-                                }
-                              ],
-                              "actions": [
-                                {
-                                  "type": {
-                                    "value": "MettreXY"
-                                  },
-                                  "parameters": [
-                                    "DustParticles",
-                                    "=",
-                                    "Soldier.PointX(\"DustProjection\")",
-                                    "=",
-                                    "Soldier.PointY(\"DustProjection\")"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "ParticleSystem::StartEmission"
-                                  },
-                                  "parameters": [
-                                    "DustParticles"
-                                  ]
-                                }
-                              ]
                             }
                           ]
                         },
@@ -13342,16 +13201,7 @@
                               "parameters": []
                             }
                           ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "ParticleSystem::StopEmission"
-                              },
-                              "parameters": [
-                                "DustParticles"
-                              ]
-                            }
-                          ]
+                          "actions": []
                         },
                         {
                           "colorB": 228,
@@ -13513,16 +13363,6 @@
                                     "Soldier",
                                     "\"Duck\""
                                   ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "MettreX"
-                                  },
-                                  "parameters": [
-                                    "DustParticles",
-                                    "=",
-                                    "Soldier.BoundingBoxRight()"
-                                  ]
                                 }
                               ]
                             },
@@ -13609,16 +13449,6 @@
                                       "parameters": [
                                         "Soldier",
                                         "\"Duck\""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "MettreX"
-                                      },
-                                      "parameters": [
-                                        "DustParticles",
-                                        "=",
-                                        "Soldier.BoundingBoxRight()"
                                       ]
                                     }
                                   ]
@@ -14327,14 +14157,6 @@
                                     "35",
                                     "0.5"
                                   ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "ParticleSystem::StopEmission"
-                                  },
-                                  "parameters": [
-                                    "DustParticles"
-                                  ]
                                 }
                               ]
                             }
@@ -14560,11 +14382,12 @@
           "customSize": true,
           "height": 896,
           "layer": "Background",
+          "locked": true,
           "name": "Background",
           "persistentUuid": "968c9c47-08c4-44eb-917a-906d2ecee36b",
           "width": 1024,
-          "x": -32,
-          "y": -320,
+          "x": 0,
+          "y": -192,
           "zOrder": 15,
           "numberProperties": [],
           "stringProperties": [],
