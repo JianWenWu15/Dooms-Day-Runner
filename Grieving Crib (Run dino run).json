@@ -2281,6 +2281,15 @@
         "name": "assets/9patch_Desert Tile_north.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Police Car5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\Police Car5.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -2399,7 +2408,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.7982732180432438,
+        "zoomFactor": 0.4854066202646336,
         "windowMask": false
       },
       "objectsGroups": [
@@ -12941,8 +12950,8 @@
           ]
         },
         {
-          "assetStoreId": "c7d89d75c2aac88b29738b5ac2ead1fb7214c190f2e1e622503a3bb0fa07321e",
-          "name": "PoliceCar",
+          "assetStoreId": "",
+          "name": "Police",
           "tags": "",
           "type": "Sprite",
           "updateIfNotVisible": false,
@@ -12951,22 +12960,21 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "Police Car",
+              "name": "",
               "useMultipleDirections": false,
               "directions": [
                 {
-                  "looping": true,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.025,
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "Police Car3",
+                      "image": "assets\\Police Car5.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 117,
+                        "y": 99
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -12978,19 +12986,39 @@
                         [
                           {
                             "x": 0,
+                            "y": 42.5
+                          },
+                          {
+                            "x": 31,
+                            "y": 42.5
+                          },
+                          {
+                            "x": 72.5,
                             "y": 0
                           },
                           {
-                            "x": 33,
+                            "x": 136.5,
                             "y": 0
                           },
                           {
-                            "x": 33,
-                            "y": 14
+                            "x": 170.5,
+                            "y": 40.5
+                          },
+                          {
+                            "x": 236,
+                            "y": 41.5
+                          },
+                          {
+                            "x": 236,
+                            "y": 100
+                          },
+                          {
+                            "x": 147.5,
+                            "y": 100
                           },
                           {
                             "x": 0,
-                            "y": 14
+                            "y": 100
                           }
                         ]
                       ]
@@ -13929,7 +13957,7 @@
                                   },
                                   "parameters": [
                                     "",
-                                    "PoliceCar",
+                                    "Police",
                                     "RandomInRange(75, 125) + SceneWindowWidth()",
                                     "Platform.BoundingBoxTop()",
                                     ""
@@ -13940,7 +13968,7 @@
                                     "value": "AddForceAL"
                                   },
                                   "parameters": [
-                                    "PoliceCar",
+                                    "Police",
                                     "180",
                                     "Variable(ObstacleSpeed)",
                                     "1"
@@ -14157,7 +14185,7 @@
                                       },
                                       "parameters": [
                                         "",
-                                        "PoliceCar",
+                                        "Police",
                                         "100 + SceneWindowWidth()+Variable(SpawnedCactusInField)*70",
                                         "Platform.BoundingBoxTop()",
                                         ""
@@ -14168,7 +14196,7 @@
                                         "value": "AddForceAL"
                                       },
                                       "parameters": [
-                                        "PoliceCar",
+                                        "Police",
                                         "180",
                                         "Variable(ObstacleSpeed)",
                                         "1"
@@ -14245,7 +14273,7 @@
                                   },
                                   "parameters": [
                                     "Soldier",
-                                    "PoliceCar",
+                                    "Police",
                                     "",
                                     "",
                                     ""
