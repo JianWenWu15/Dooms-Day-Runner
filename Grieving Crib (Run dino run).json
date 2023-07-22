@@ -2232,6 +2232,46 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Brawler Series/SMS/647d9f8d536456721e96d5d89abb46a88541244fe592fecfb26e23dec697187a_Soldier_Walk 3_4.png",
           "name": "Soldier_Walk 3_4.png"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Police Car.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Police Car.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Pixel Vehicle Pack/Vehicles/Public Service Vehicles/c3d27f65932e4b5fd3c9925f77f36be6c6e2ab23b0cf591a37fb0bcc9d1e3e08_Police Car.png",
+          "name": "Police Car.png"
+        }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Police Car2.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Police Car",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Police Car3.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Police Car2",
+        "smoothed": true,
+        "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Police Car4.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "Police Car3",
+        "smoothed": true,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2350,7 +2390,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 1.7116772697201594,
+        "zoomFactor": 0.7982732180432438,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2662,21 +2702,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "GameTitle",
-          "persistentUuid": "5badf954-5301-4a47-9086-d516156198f9",
-          "width": 0,
-          "x": 32,
-          "y": 32,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "depth": 0,
           "height": 96,
@@ -2687,6 +2712,21 @@
           "x": 480,
           "y": 416,
           "zOrder": 26,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "GameName",
+          "persistentUuid": "47070c11-124e-4e0f-b702-771b7b671423",
+          "width": 0,
+          "x": 32,
+          "y": 32,
+          "zOrder": 27,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2718,7 +2758,7 @@
             }
           ],
           "behaviors": [],
-          "string": "Click on Dino to run",
+          "string": "Click on Player to run",
           "font": "Nathaniel-19.otf",
           "textAlignment": "",
           "characterSize": 30,
@@ -2726,6 +2766,41 @@
             "b": 0,
             "g": 0,
             "r": 0
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "GameName",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Outline",
+              "doubleParameters": {
+                "padding": 0,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
+          "behaviors": [],
+          "string": "Doomsday\n  Run",
+          "font": "Nathaniel-19.otf",
+          "textAlignment": "",
+          "characterSize": 110,
+          "color": {
+            "b": 125,
+            "g": 125,
+            "r": 240
           }
         },
         {
@@ -6686,6 +6761,66 @@
                           {
                             "x": 1,
                             "y": 31
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "c7d89d75c2aac88b29738b5ac2ead1fb7214c190f2e1e622503a3bb0fa07321e",
+          "name": "PoliceCar",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Police Car.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 33,
+                            "y": 0
+                          },
+                          {
+                            "x": 33,
+                            "y": 14
+                          },
+                          {
+                            "x": 0,
+                            "y": 14
                           }
                         ]
                       ]
@@ -12795,6 +12930,67 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "c7d89d75c2aac88b29738b5ac2ead1fb7214c190f2e1e622503a3bb0fa07321e",
+          "name": "PoliceCar",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "Police Car",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.025,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Police Car3",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 33,
+                            "y": 0
+                          },
+                          {
+                            "x": 33,
+                            "y": 14
+                          },
+                          {
+                            "x": 0,
+                            "y": 14
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "events": [
@@ -13724,7 +13920,7 @@
                                   },
                                   "parameters": [
                                     "",
-                                    "CactusObstacle",
+                                    "PoliceCar",
                                     "RandomInRange(75, 125) + SceneWindowWidth()",
                                     "Platform.BoundingBoxTop()",
                                     ""
@@ -13735,7 +13931,7 @@
                                     "value": "AddForceAL"
                                   },
                                   "parameters": [
-                                    "CactusObstacle",
+                                    "PoliceCar",
                                     "180",
                                     "Variable(ObstacleSpeed)",
                                     "1"
@@ -13952,7 +14148,7 @@
                                       },
                                       "parameters": [
                                         "",
-                                        "CactusObstacle",
+                                        "PoliceCar",
                                         "100 + SceneWindowWidth()+Variable(SpawnedCactusInField)*70",
                                         "Platform.BoundingBoxTop()",
                                         ""
@@ -13963,7 +14159,7 @@
                                         "value": "AddForceAL"
                                       },
                                       "parameters": [
-                                        "CactusObstacle",
+                                        "PoliceCar",
                                         "180",
                                         "Variable(ObstacleSpeed)",
                                         "1"
@@ -14040,7 +14236,7 @@
                                   },
                                   "parameters": [
                                     "Soldier",
-                                    "CactusObstacle",
+                                    "PoliceCar",
                                     "",
                                     "",
                                     ""
