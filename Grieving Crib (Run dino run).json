@@ -12,7 +12,7 @@
     "antialisingEnabledOnMobile": false,
     "folderProject": false,
     "orientation": "landscape",
-    "packageName": "com.example.rundinorun",
+    "packageName": "com.example.doomsdayrunner",
     "pixelsRounding": false,
     "projectUuid": "f3876c44-bc06-439b-b862-9d43181fbac6",
     "scaleMode": "linear",
@@ -20,8 +20,8 @@
     "templateSlug": "run-dino-run",
     "useExternalSourceFiles": false,
     "version": "1.0.0",
-    "name": "Grieving Crib (Run dino run)",
-    "description": "The revamped version of Chrome's offline Dino runner.\n\nControls :\n   Computer : Up and Down arrow keys\n   Touch screens : Swipe up or down\n",
+    "name": "Doomsday Runner",
+    "description": "Doomsday version of Google's offline Dino runner.\n\nControls :\n   Computer : Up and Down arrow keys\n   Touch screens : Swipe up or down",
     "author": "",
     "windowWidth": 960,
     "windowHeight": 540,
@@ -528,20 +528,10 @@
         "userAdded": true
       },
       {
-        "file": "assets/jump.mp3",
-        "kind": "audio",
-        "metadata": "",
-        "name": "Jump.mp3",
-        "preloadAsMusic": false,
-        "preloadAsSound": true,
-        "preloadInCache": false,
-        "userAdded": true
-      },
-      {
         "file": "assets/skid.mp3",
         "kind": "audio",
         "metadata": "",
-        "name": "Skid.mp3",
+        "name": "skid.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": true,
         "preloadInCache": false,
@@ -551,27 +541,27 @@
         "file": "assets/bonus.mp3",
         "kind": "audio",
         "metadata": "",
-        "name": "Bonus.mp3",
+        "name": "bonus.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": true,
         "preloadInCache": false,
         "userAdded": true
       },
       {
-        "file": "assets/DesertMusic.mp3",
+        "file": "assets/runnermusic.mp3",
         "kind": "audio",
         "metadata": "",
-        "name": "DesertMusic.mp3",
+        "name": "runnermusic.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": true
       },
       {
-        "file": "assets/LeaderboardMusic.mp3",
+        "file": "assets/leaderboardmusic.mp3",
         "kind": "audio",
         "metadata": "",
-        "name": "LeaderboardMusic.mp3",
+        "name": "leaderboardmusic.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "preloadInCache": false,
@@ -1260,7 +1250,7 @@
         "file": "assets/death.mp3",
         "kind": "audio",
         "metadata": "",
-        "name": "Death.mp3",
+        "name": "death.mp3",
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "preloadInCache": false,
@@ -1285,16 +1275,36 @@
         "userAdded": true
       },
       {
-        "alwaysLoaded": false,
-        "file": "assets/Soldier_Carry Walk_1.png",
-        "kind": "image",
+        "file": "assets/jump.mp3",
+        "kind": "audio",
         "metadata": "",
-        "name": "Soldier_Carry Walk_1.png",
-        "smoothed": false,
-        "userAdded": false,
-        "origin": {
-          "identifier": "https://asset-resources.gdevelop.io/public-resources/Brawler Series/SMS/03a0e75f32324999ddaebf903f2f5976d0cd501157cf5629ac79b1d91a609342_Soldier_Carry Walk_1.png",
-          "name": "Soldier_Carry Walk_1.png"
+        "name": "assets/jump.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": true
+      }
+    ],
+    "resourceFolders": []
+  },
+  "objects": [
+    {
+      "assetStoreId": "",
+      "height": 32,
+      "name": "Platform",
+      "tags": "",
+      "texture": "9patch_Desert Tile_north.png",
+      "type": "TiledSpriteObject::TiledSprite",
+      "width": 32,
+      "variables": [],
+      "effects": [],
+      "behaviors": [
+        {
+          "name": "Platform",
+          "type": "PlatformBehavior::PlatformBehavior",
+          "canBeGrabbed": false,
+          "platformType": "NormalPlatform",
+          "yGrabOffset": 0
         }
       },
       {
@@ -6726,7 +6736,7 @@
               },
               "parameters": [
                 "",
-                "LeaderboardMusic.mp3",
+                "leaderboardmusic.mp3",
                 "yes",
                 "30",
                 ""
@@ -13085,9 +13095,9 @@
                               },
                               "parameters": [
                                 "",
-                                "DesertMusic.mp3",
+                                "runnermusic.mp3",
                                 "yes",
-                                "50",
+                                "35",
                                 ""
                               ]
                             }
@@ -13388,7 +13398,7 @@
                                   },
                                   "parameters": [
                                     "",
-                                    "Jump.mp3",
+                                    "assets/jump.mp3",
                                     "",
                                     "100",
                                     "1"
@@ -13431,7 +13441,7 @@
                                   },
                                   "parameters": [
                                     "",
-                                    "Skid.mp3",
+                                    "skid.mp3",
                                     "",
                                     "30",
                                     "1"
@@ -13720,7 +13730,7 @@
                               },
                               "parameters": [
                                 "",
-                                "Bonus.mp3",
+                                "bonus.mp3",
                                 "",
                                 "100",
                                 "0.5"
@@ -14322,9 +14332,9 @@
                                   },
                                   "parameters": [
                                     "",
-                                    "Death.mp3",
+                                    "death.mp3",
                                     "",
-                                    "30",
+                                    "35",
                                     "0.5"
                                   ]
                                 },
@@ -15189,7 +15199,7 @@
               },
               "parameters": [
                 "",
-                "LeaderboardMusic.mp3",
+                "leaderboardmusic.mp3",
                 "yes",
                 "70",
                 ""
