@@ -2272,6 +2272,15 @@
         "name": "Police Car3",
         "smoothed": true,
         "userAdded": false
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/9patch_Desert Tile_north.png",
+        "kind": "image",
+        "metadata": "{\"localFilePath\":\"assets/9patch_Desert Tile_north.png\",\"extension\":\".png\",\"pskl\":{}}",
+        "name": "assets/9patch_Desert Tile_north.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -2282,7 +2291,7 @@
       "height": 32,
       "name": "Platform",
       "tags": "",
-      "texture": "9patch_Desert Tile_north.png",
+      "texture": "assets/9patch_Desert Tile_north.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
       "variables": [],
@@ -14350,8 +14359,8 @@
                                     "",
                                     "death.mp3",
                                     "",
-                                    "35",
-                                    "0.5"
+                                    "30",
+                                    ".5"
                                   ]
                                 }
                               ]
@@ -18163,7 +18172,7 @@
                 "",
                 "leaderboardmusic.mp3",
                 "yes",
-                "70",
+                "20",
                 ""
               ]
             }
