@@ -61,7 +61,7 @@
     "loadingScreen": {
       "backgroundColor": 0,
       "backgroundFadeInDuration": 0.2,
-      "backgroundImageResourceName": "",
+      "backgroundImageResourceName": "Background.png",
       "gdevelopLogoStyle": "light",
       "logoAndProgressFadeInDuration": 0.2,
       "logoAndProgressLogoFadeInDelay": 0.2,
