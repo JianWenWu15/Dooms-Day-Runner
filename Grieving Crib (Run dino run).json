@@ -21,7 +21,7 @@
     "useExternalSourceFiles": false,
     "version": "1.0.0",
     "name": "Doomsday Runner",
-    "description": "Doomsday version of Google's offline Dino runner.\n\nControls :\n   Computer : Up and Down arrow keys\n   Touch screens : Swipe up or down",
+    "description": "Doomsday version of Google's offline Dino runner.\n\nControls :\n   Computer : Up and Down arrow keys",
     "author": "",
     "windowWidth": 960,
     "windowHeight": 540,
@@ -2388,52 +2388,6 @@
       "texture": "Background.png",
       "type": "TiledSpriteObject::TiledSprite",
       "width": 32,
-      "variables": [],
-      "effects": [],
-      "behaviors": []
-    },
-    {
-      "additive": false,
-      "assetStoreId": "",
-      "destroyWhenNoParticles": true,
-      "emitterAngleA": 0,
-      "emitterAngleB": 45,
-      "emitterForceMax": 85,
-      "emitterForceMin": 45,
-      "flow": 45,
-      "jumpForwardInTimeOnCreation": 0,
-      "maxParticleNb": 500,
-      "name": "DustParticles",
-      "particleAlpha1": 204,
-      "particleAlpha2": 0,
-      "particleAlphaRandomness1": 0,
-      "particleAlphaRandomness2": 0,
-      "particleAngle1": 0,
-      "particleAngle2": 0,
-      "particleAngleRandomness1": 0,
-      "particleAngleRandomness2": 0,
-      "particleBlue1": 148,
-      "particleBlue2": 148,
-      "particleGravityX": 0,
-      "particleGravityY": 0,
-      "particleGreen1": 213,
-      "particleGreen2": 213,
-      "particleLifeTimeMax": 1.5,
-      "particleLifeTimeMin": 0.5,
-      "particleRed1": 243,
-      "particleRed2": 243,
-      "particleSize1": 100,
-      "particleSize2": 100,
-      "particleSizeRandomness1": 0,
-      "particleSizeRandomness2": 0,
-      "rendererParam1": 5,
-      "rendererParam2": 1,
-      "rendererType": "Point",
-      "tags": "",
-      "tank": -1,
-      "textureParticleName": "",
-      "type": "ParticleSystem::ParticleEmitter",
-      "zoneRadius": 3,
       "variables": [],
       "effects": [],
       "behaviors": []
@@ -5831,33 +5785,6 @@
                 ""
               ]
             }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SystemInfo::HasTouchScreen"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextObject::String"
-                  },
-                  "parameters": [
-                    "StartText",
-                    "=",
-                    "\"Tap on Soldier to run\""
-                  ]
-                }
-              ]
-            }
           ]
         },
         {
@@ -5908,43 +5835,6 @@
                         "",
                         "\"Game\"",
                         ""
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Comment",
-                  "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
-                    "textB": 0,
-                    "textG": 0,
-                    "textR": 0
-                  },
-                  "comment": "This action will display the leaderboard on top of the game scene. The display will not disable inputs or controls ; if the player clicks on the button \"restart\" while the leaderboard it displayed, it will restart the game. Consequently, it is recommended that the scene is switched to a blank one while the leaderboard is displayed to avoid this issue."
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Leaderboards::DisplayLeaderboard"
-                      },
-                      "parameters": [
-                        "",
-                        "\"2d7c1dd3-3cbc-4c0e-99bf-da35cc181d9d\"",
-                        "yes"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "PushScene"
-                      },
-                      "parameters": [
-                        "",
-                        "\"LeaderboardBackground\""
                       ]
                     }
                   ]
@@ -6029,30 +5919,6 @@
                   ]
                 }
               ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": []
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": []
             }
           ],
           "parameters": []
@@ -6178,12 +6044,12 @@
           "value": "2"
         },
         {
-          "name": "CactusInField",
+          "name": "CarsinField",
           "type": "number",
           "value": 0
         },
         {
-          "name": "SpawnedCactusInField",
+          "name": "SpawnedCarasinField",
           "type": "number",
           "value": 0
         }
@@ -9972,13 +9838,6 @@
                               ]
                             }
                           ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Link",
-                          "include": {
-                            "includeConfig": 0
-                          },
-                          "target": "DustEmitterSetup"
                         }
                       ]
                     }
@@ -10307,83 +10166,6 @@
                                   ]
                                 }
                               ]
-                            },
-                            {
-                              "type": "BuiltinCommonInstructions::Standard",
-                              "conditions": [
-                                {
-                                  "type": {
-                                    "value": "MouseButtonPressed"
-                                  },
-                                  "parameters": [
-                                    "Soldier",
-                                    "Left"
-                                  ]
-                                },
-                                {
-                                  "type": {
-                                    "value": "BuiltinCommonInstructions::Once"
-                                  },
-                                  "parameters": []
-                                }
-                              ],
-                              "actions": [],
-                              "events": [
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "SourisSurObjet"
-                                      },
-                                      "parameters": [
-                                        "JumpButton",
-                                        "",
-                                        "",
-                                        ""
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "PlatformBehavior::SimulateJumpKey"
-                                      },
-                                      "parameters": [
-                                        "Soldier",
-                                        "PlatformerObject"
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "SourisSurObjet"
-                                      },
-                                      "parameters": [
-                                        "DuckButton",
-                                        "",
-                                        "",
-                                        ""
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "SetAnimationName"
-                                      },
-                                      "parameters": [
-                                        "Soldier",
-                                        "\"Duck\""
-                                      ]
-                                    }
-                                  ]
-                                }
-                              ]
                             }
                           ],
                           "parameters": []
@@ -10412,96 +10194,6 @@
                                 "Score",
                                 "+",
                                 "round(TimeDelta()*100)"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "CollisionNP"
-                              },
-                              "parameters": [
-                                "Soldier",
-                                "BonusObject",
-                                "",
-                                "",
-                                ""
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "ModVarGlobal"
-                              },
-                              "parameters": [
-                                "Score",
-                                "+",
-                                "500"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "Create"
-                              },
-                              "parameters": [
-                                "",
-                                "BonusParticle",
-                                "Soldier.CenterX()",
-                                "Soldier.CenterY()",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "ParticleSystem::EmitterAngle"
-                              },
-                              "parameters": [
-                                "BonusParticle",
-                                "=",
-                                "-90"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "Delete"
-                              },
-                              "parameters": [
-                                "BonusObject",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "PlaySound"
-                              },
-                              "parameters": [
-                                "",
-                                "bonus.mp3",
-                                "",
-                                "100",
-                                "0.5"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetCenter"
-                              },
-                              "parameters": [
-                                "BonusParticle",
-                                "=",
-                                "Soldier.CenterX()",
-                                "=",
-                                "Soldier.CenterY()"
                               ]
                             }
                           ]
@@ -10683,7 +10375,7 @@
                                 "textG": 0,
                                 "textR": 0
                               },
-                              "comment": "Create an island with a reward (0: reward on bottom, 1: reward on top, 3: no reward)."
+                              "comment": "Create air obstacle"
                             },
                             {
                               "type": "BuiltinCommonInstructions::Standard",
@@ -10714,17 +10406,6 @@
                                 },
                                 {
                                   "type": {
-                                    "value": "ModVarObjet"
-                                  },
-                                  "parameters": [
-                                    "HazardAirObstacle",
-                                    "Reward",
-                                    "=",
-                                    "RandomInRange(0, 2)"
-                                  ]
-                                },
-                                {
-                                  "type": {
                                     "value": "AddForceAL"
                                   },
                                   "parameters": [
@@ -10732,90 +10413,6 @@
                                     "180",
                                     "Variable(ObstacleSpeed)",
                                     "1"
-                                  ]
-                                }
-                              ],
-                              "events": [
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "VarObjet"
-                                      },
-                                      "parameters": [
-                                        "HazardAirObstacle",
-                                        "Reward",
-                                        "=",
-                                        "0"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "Create"
-                                      },
-                                      "parameters": [
-                                        "",
-                                        "BonusObject",
-                                        "HazardAirObstacle.PointX(\"RewardUp\")",
-                                        "HazardAirObstacle.PointY(\"RewardUp\")",
-                                        ""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "AddForceAL"
-                                      },
-                                      "parameters": [
-                                        "BonusObject",
-                                        "180",
-                                        "Variable(ObstacleSpeed)",
-                                        "1"
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "BuiltinCommonInstructions::Standard",
-                                  "conditions": [
-                                    {
-                                      "type": {
-                                        "value": "VarObjet"
-                                      },
-                                      "parameters": [
-                                        "HazardAirObstacle",
-                                        "Reward",
-                                        "=",
-                                        "1"
-                                      ]
-                                    }
-                                  ],
-                                  "actions": [
-                                    {
-                                      "type": {
-                                        "value": "Create"
-                                      },
-                                      "parameters": [
-                                        "",
-                                        "BonusObject",
-                                        "HazardAirObstacle.PointX(\"RewardDown\")",
-                                        "HazardAirObstacle.PointY(\"RewardDown\")",
-                                        ""
-                                      ]
-                                    },
-                                    {
-                                      "type": {
-                                        "value": "AddForceAL"
-                                      },
-                                      "parameters": [
-                                        "BonusObject",
-                                        "180",
-                                        "Variable(ObstacleSpeed)",
-                                        "1"
-                                      ]
-                                    }
                                   ]
                                 }
                               ]
@@ -10833,6 +10430,7 @@
                               "comment": "Spawn a field of cars of length scaling with score (max 4)."
                             },
                             {
+                              "folded": true,
                               "type": "BuiltinCommonInstructions::Standard",
                               "conditions": [
                                 {
@@ -11326,44 +10924,14 @@
         {
           "angle": 0,
           "customSize": true,
-          "height": 320,
-          "layer": "",
-          "name": "ScorePannel",
-          "persistentUuid": "54d42257-be1c-432d-ba5e-53c9de63c893",
-          "width": 512,
-          "x": 224,
-          "y": 64,
-          "zOrder": 16,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
           "height": 35,
           "layer": "",
           "name": "ScoreText",
           "persistentUuid": "722f1233-75ba-4128-8905-4ac5dd26bc1e",
           "width": 384,
-          "x": 288,
-          "y": 128,
+          "x": 384,
+          "y": 189,
           "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "height": 41,
-          "layer": "",
-          "name": "PlayerNameInput",
-          "persistentUuid": "a681abd2-5235-4165-a003-4a9553d79cb5",
-          "width": 320,
-          "x": 320,
-          "y": 181,
-          "zOrder": 19,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -11388,41 +10956,11 @@
           "customSize": false,
           "height": 0,
           "layer": "",
-          "name": "SubmitButton",
-          "persistentUuid": "7b23f42a-648d-4b42-95bd-aad6c1861b5e",
-          "width": 0,
-          "x": 320,
-          "y": 256,
-          "zOrder": 26,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "ScoresButton",
-          "persistentUuid": "c1ff6a1e-ed5f-406e-82ce-0af69ab646fe",
-          "width": 0,
-          "x": 512,
-          "y": 256,
-          "zOrder": 27,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
           "name": "RestartButton",
           "persistentUuid": "d239a731-7dae-42f6-bfcb-f0a21413479b",
           "width": 0,
           "x": 416,
-          "y": 320,
+          "y": 241,
           "zOrder": 28,
           "numberProperties": [],
           "stringProperties": [],
@@ -11432,13 +10970,13 @@
           "angle": 0,
           "customSize": true,
           "depth": 0,
-          "height": 64,
+          "height": 96,
           "layer": "",
           "name": "Soldier",
           "persistentUuid": "46bcacf8-8400-46d3-9ac7-6ba7ae500f22",
-          "width": 32,
-          "x": 64,
-          "y": 448,
+          "width": 64,
+          "x": 448,
+          "y": 416,
           "zOrder": 29,
           "numberProperties": [],
           "stringProperties": [],
@@ -11446,23 +10984,6 @@
         }
       ],
       "objects": [
-        {
-          "assetStoreId": "",
-          "bottomMargin": 64,
-          "height": 192,
-          "leftMargin": 64,
-          "name": "ScorePannel",
-          "rightMargin": 64,
-          "tags": "",
-          "texture": "9patch_Desert Tile_all_64.png",
-          "tiled": true,
-          "topMargin": 64,
-          "type": "PanelSpriteObject::PanelSprite",
-          "width": 192,
-          "variables": [],
-          "effects": [],
-          "behaviors": []
-        },
         {
           "assetStoreId": "",
           "bold": false,
@@ -11483,30 +11004,6 @@
             "b": 255,
             "g": 255,
             "r": 255
-          }
-        },
-        {
-          "assetStoreId": "",
-          "name": "PlayerNameInput",
-          "tags": "",
-          "type": "TextInput::TextInputObject",
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "content": {
-            "initialValue": "",
-            "placeholder": "PlayerName",
-            "fontResourceName": "Nathaniel-19.otf",
-            "fontSize": 30,
-            "inputType": "text",
-            "textColor": "0;0;0",
-            "fillColor": "245;166;35",
-            "fillOpacity": 255,
-            "borderColor": "245;166;35",
-            "borderOpacity": 255,
-            "borderWidth": 1,
-            "readOnly": false,
-            "disabled": false
           }
         },
         {
@@ -11567,351 +11064,6 @@
               "width": 128
             }
           }
-        },
-        {
-          "assetStoreId": "",
-          "name": "SubmitButton",
-          "tags": "",
-          "type": "PanelSpriteButton::PanelSpriteButton",
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "content": {
-            "HoveredFadeOutDuration": 0
-          },
-          "childrenContent": {
-            "Hovered": {
-              "bottomMargin": 11,
-              "height": 47,
-              "leftMargin": 20,
-              "rightMargin": 20,
-              "texture": "assets\\Buttons\\SubmitButton.png",
-              "tiled": false,
-              "topMargin": 11,
-              "width": 128
-            },
-            "Idle": {
-              "bottomMargin": 11,
-              "height": 47,
-              "leftMargin": 20,
-              "rightMargin": 20,
-              "texture": "assets\\Buttons\\SubmitButton.png",
-              "tiled": false,
-              "topMargin": 11,
-              "width": 128
-            },
-            "Label": {
-              "bold": false,
-              "italic": false,
-              "smoothed": true,
-              "underlined": false,
-              "string": "SUBMIT",
-              "font": "Nathaniel-19.otf",
-              "textAlignment": "center",
-              "characterSize": 30,
-              "color": {
-                "b": 255,
-                "g": 255,
-                "r": 255
-              }
-            },
-            "Pressed": {
-              "bottomMargin": 11,
-              "height": 47,
-              "leftMargin": 20,
-              "rightMargin": 20,
-              "texture": "assets\\Buttons\\SubmitButton.png",
-              "tiled": false,
-              "topMargin": 11,
-              "width": 128
-            }
-          }
-        },
-        {
-          "assetStoreId": "",
-          "name": "ScoresButton",
-          "tags": "",
-          "type": "PanelSpriteButton::PanelSpriteButton",
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "content": {
-            "HoveredFadeOutDuration": 0
-          },
-          "childrenContent": {
-            "Hovered": {
-              "bottomMargin": 11,
-              "height": 47,
-              "leftMargin": 20,
-              "rightMargin": 17,
-              "texture": "assets\\Buttons\\SubmitButton.png",
-              "tiled": false,
-              "topMargin": 11,
-              "width": 128
-            },
-            "Idle": {
-              "bottomMargin": 11,
-              "height": 47,
-              "leftMargin": 20,
-              "rightMargin": 17,
-              "texture": "assets\\Buttons\\SubmitButton.png",
-              "tiled": false,
-              "topMargin": 11,
-              "width": 128
-            },
-            "Label": {
-              "bold": false,
-              "italic": false,
-              "smoothed": true,
-              "underlined": false,
-              "string": "SCORES",
-              "font": "Nathaniel-19.otf",
-              "textAlignment": "center",
-              "characterSize": 30,
-              "color": {
-                "b": 255,
-                "g": 255,
-                "r": 255
-              }
-            },
-            "Pressed": {
-              "bottomMargin": 11,
-              "height": 47,
-              "leftMargin": 20,
-              "rightMargin": 17,
-              "texture": "assets\\Buttons\\SubmitButton.png",
-              "tiled": false,
-              "topMargin": 11,
-              "width": 128
-            }
-          }
-        },
-        {
-          "adaptCollisionMaskAutomatically": false,
-          "assetStoreId": "",
-          "name": "Dino",
-          "tags": "",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "LinearMovement",
-              "type": "LinearMovement::LinearMovement",
-              "SpeedX": 200,
-              "SpeedY": 0
-            },
-            {
-              "name": "ScreenWrap",
-              "type": "ScreenWrap::ScreenWrap",
-              "HorizontalWrapping": true,
-              "VerticalWrapping": true,
-              "BorderTop": 0,
-              "BorderLeft": 0,
-              "BorderRight": 0,
-              "BorderBottom": 0,
-              "TriggerOffset": 128
-            }
-          ],
-          "animations": [
-            {
-              "name": "Run",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": true,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "assets/Dino/Dino_Run_1.png",
-                      "points": [
-                        {
-                          "name": "DustProjection",
-                          "x": 25,
-                          "y": 104
-                        }
-                      ],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "assets/Dino/Dino_Run_2.png",
-                      "points": [
-                        {
-                          "name": "DustProjection",
-                          "x": 25,
-                          "y": 104
-                        }
-                      ],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "assets/Dino/Dino_Run_3.png",
-                      "points": [
-                        {
-                          "name": "DustProjection",
-                          "x": 25,
-                          "y": 104
-                        }
-                      ],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "assets/Dino/Dino_Run_4.png",
-                      "points": [
-                        {
-                          "name": "DustProjection",
-                          "x": 25,
-                          "y": 104
-                        }
-                      ],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "assets/Dino/Dino_Run_5.png",
-                      "points": [
-                        {
-                          "name": "DustProjection",
-                          "x": 25,
-                          "y": 104
-                        }
-                      ],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "assets/Dino/Dino_Run_6.png",
-                      "points": [
-                        {
-                          "name": "DustProjection",
-                          "x": 25,
-                          "y": 104
-                        }
-                      ],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "assets/Dino/Dino_Run_7.png",
-                      "points": [
-                        {
-                          "name": "DustProjection",
-                          "x": 25,
-                          "y": 104
-                        }
-                      ],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    },
-                    {
-                      "hasCustomCollisionMask": false,
-                      "image": "assets/Dino/Dino_Run_8.png",
-                      "points": [
-                        {
-                          "name": "DustProjection",
-                          "x": 25,
-                          "y": 104
-                        }
-                      ],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": []
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         },
         {
           "adaptCollisionMaskAutomatically": false,
@@ -14902,148 +14054,14 @@
                 "20",
                 ""
               ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "PlayerAuthentication::DisplayAuthenticationBanner"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PlayerAuthentication::IsPlayerAuthenticated"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextInput::TextInputObject::SetText"
-                  },
-                  "parameters": [
-                    "PlayerNameInput",
-                    "=",
-                    "PlayerAuthentication::Username()"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "TextInput::TextInputObject::SetDisabled"
-                  },
-                  "parameters": [
-                    "PlayerNameInput",
-                    "yes"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "PlayerAuthentication::IsPlayerAuthenticated"
-                  },
-                  "parameters": []
-                },
-                {
-                  "type": {
-                    "value": "VarGlobalTxt"
-                  },
-                  "parameters": [
-                    "PlayerName",
-                    "!=",
-                    "\"0\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "TextInput::TextInputObject::SetText"
-                  },
-                  "parameters": [
-                    "PlayerNameInput",
-                    "=",
-                    "GlobalVariableString(PlayerName)"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PlayerAuthentication::HasPlayerLoggedIn"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "TextInput::TextInputObject::SetText"
-              },
-              "parameters": [
-                "PlayerNameInput",
-                "=",
-                "PlayerAuthentication::Username()"
-              ]
             },
             {
               "type": {
-                "value": "TextInput::TextInputObject::SetDisabled"
+                "value": "SetAnimationName"
               },
               "parameters": [
-                "PlayerNameInput",
-                "yes"
-              ]
-            },
-            {
-              "type": {
-                "value": "PlayerAuthentication::DisplayAuthenticationBanner"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Leaderboards::IsLeaderboardViewErrored"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "PlayerAuthentication::DisplayAuthenticationBanner"
-              },
-              "parameters": [
-                ""
+                "Soldier",
+                "\"Run\""
               ]
             }
           ]
@@ -15073,308 +14091,12 @@
               "actions": [
                 {
                   "type": {
-                    "value": "PlayerAuthentication::HideAuthenticationBanner"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "Scene"
                   },
                   "parameters": [
                     "",
                     "\"Game\"",
                     ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Handle leaderboards.\nTo create a leaderboard, make sure your game is registered in Home > Profile > Games Dashboard and then, click on \"Manage game\" > Leaderboards. When a leaderboard is created, it should be available in the actions."
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
-                  },
-                  "parameters": [
-                    "SubmitButton",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "PlayerAuthentication::HideAuthenticationBanner"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "PlayerAuthentication::IsPlayerAuthenticated"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Leaderboards::SaveConnectedPlayerScore"
-                      },
-                      "parameters": [
-                        "",
-                        "\"2d7c1dd3-3cbc-4c0e-99bf-da35cc181d9d\"",
-                        "GlobalVariable(Score)"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "inverted": true,
-                        "value": "PlayerAuthentication::IsPlayerAuthenticated"
-                      },
-                      "parameters": []
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Leaderboards::SavePlayerScore"
-                      },
-                      "parameters": [
-                        "",
-                        "\"2d7c1dd3-3cbc-4c0e-99bf-da35cc181d9d\"",
-                        "GlobalVariable(Score)",
-                        "PlayerNameInput.Text()",
-                        "",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ModVarGlobalTxt"
-                      },
-                      "parameters": [
-                        "PlayerName",
-                        "=",
-                        "PlayerNameInput.Text()"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Leaderboards::DisplayLeaderboard"
-                      },
-                      "parameters": [
-                        "",
-                        "\"2d7c1dd3-3cbc-4c0e-99bf-da35cc181d9d\"",
-                        "yes"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "SetSceneVariableAsBoolean"
-                      },
-                      "parameters": [
-                        "HasSubmitScore",
-                        "True"
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "PanelSpriteButton::PanelSpriteButton::IsClicked"
-                  },
-                  "parameters": [
-                    "ScoresButton",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "PlayerAuthentication::HideAuthenticationBanner"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Leaderboards::DisplayLeaderboard"
-                  },
-                  "parameters": [
-                    "",
-                    "\"2d7c1dd3-3cbc-4c0e-99bf-da35cc181d9d\"",
-                    "yes"
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Leaderboards::HasPlayerJustClosedLeaderboardView"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "PlayerAuthentication::DisplayAuthenticationBanner"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Allow players to submit again the score in case of error."
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "SceneVariableAsBoolean"
-                  },
-                  "parameters": [
-                    "HasSubmitScore",
-                    "True"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Leaderboards::HasLastSaveSucceeded"
-                  },
-                  "parameters": [
-                    "\"2d7c1dd3-3cbc-4c0e-99bf-da35cc181d9d\""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "PlayerAuthentication::HideAuthenticationBanner"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Scene"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Game\"",
-                    ""
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "colorB": 238,
-          "colorG": 192,
-          "colorR": 100,
-          "creationTime": 0,
-          "folded": true,
-          "name": "Visuals",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "DepartScene"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "type": "BuiltinCommonInstructions::Link",
-                  "include": {
-                    "includeConfig": 0
-                  },
-                  "target": "DustEmitterSetup"
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "MettreXY"
-                  },
-                  "parameters": [
-                    "DustParticles",
-                    "=",
-                    "Soldier.PointX(\"DustProjection\")",
-                    "=",
-                    "Soldier.PointY(\"DustProjection\")"
                   ]
                 }
               ]
@@ -15444,58 +14166,7 @@
       ]
     }
   ],
-  "externalEvents": [
-    {
-      "associatedLayout": "Game",
-      "lastChangeTimeStamp": 0,
-      "name": "DustEmitterSetup",
-      "events": [
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ParticleSystem::EmitterAngle"
-              },
-              "parameters": [
-                "DustParticles",
-                "=",
-                "180"
-              ]
-            },
-            {
-              "type": {
-                "value": "ParticleSystem::EmitterAngleA"
-              },
-              "parameters": [
-                "DustParticles",
-                "=",
-                "0"
-              ]
-            },
-            {
-              "type": {
-                "value": "ChangePlan"
-              },
-              "parameters": [
-                "DustParticles",
-                "=",
-                "0"
-              ]
-            }
-          ]
-        }
-      ]
-    }
-  ],
+  "externalEvents": [],
   "eventsFunctionsExtensions": [
     {
       "author": "@4ian",
